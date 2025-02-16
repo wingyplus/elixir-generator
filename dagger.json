@@ -1,0 +1,7 @@
+{
+  "name": "elixir-generator",
+  "engineVersion": "v0.15.4",
+  "sdk": {
+    "source": "github.com/wingyplus/dagger/sdk/elixir@ad3cc091525340ad4b5e4284f598eb71468fd475"
+  }
+}
