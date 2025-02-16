@@ -12,10 +12,13 @@ defmodule ElixirGenerator do
        ) :: Dagger.Directory.t() do
     dag()
     |> Dagger.Client.directory()
-    |> Dagger.Directory.with_directory("/", sdk(),
+    |> Dagger.Directory.with_directory("/dagger_sdk", sdk(),
       exclude: ["**/*", "!LICENSE", "!mix.exs", "!mix.lock", "!lib/**/*.exs", "lib/dagger/gen"]
     )
-    |> Dagger.Directory.with_directory("/lib/dagger/gen", dagger_api(introspection_json))
+    |> Dagger.Directory.with_directory(
+      "/dagger_sdk/lib/dagger/gen",
+      dagger_api(introspection_json)
+    )
   end
 
   defn codegen() :: Dagger.Directory.t() do
