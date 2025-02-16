@@ -1,0 +1,11 @@
+{
+  "name": "hello",
+  "engineVersion": "v0.16.0-010101000000-dev-5f4a9fcd1a90",
+  "dependencies": [
+    {
+      "name": "hello",
+      "source": "github.com/shykes/hello",
+      "pin": "2d789671a44c4d559be506a9bc4b71b0ba6e23c9"
+    }
+  ]
+}
