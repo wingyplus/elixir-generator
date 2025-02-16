@@ -13,7 +13,8 @@ defmodule ElixirGenerator do
     dag()
     |> Dagger.Client.directory()
     |> Dagger.Directory.with_directory("/dagger_sdk", sdk(),
-      exclude: ["**/*", "!LICENSE", "!mix.exs", "!mix.lock", "!lib/**/*.exs", "lib/dagger/gen"]
+      exclude: ["**/*"],
+      include: ["LICENSE", "mix.exs", "mix.lock", "lib/**/*.exs", "!lib/dagger/gen"]
     )
     |> Dagger.Directory.with_directory(
       "/dagger_sdk/lib/dagger/gen",
